@@ -1,0 +1,22 @@
+{
+  "name": "dash",
+  "main": "index.html",
+  "version": "0.0.1",
+  "description": "Dash de prueba",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular"
+  ],
+  "authors": [
+    "lea"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~3.1.0",
+    "bootstrap": "~3.3.5",
+    "lodash": "~3.10.1",
+    "jquery-modal": "^0.6.1"
+  }
+}

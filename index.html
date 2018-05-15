@@ -1,0 +1,147 @@
+<html>
+	<head>
+		<title>Juzgados Federales</title>
+		<meta charset="utf-8" />
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+		<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="bower_components/moment/min/moment.min.js"></script>
+		<script src="bower_components/moment/locale/es.js"></script>
+		
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/lodash/lodash.min.js"></script>
+
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+		<!--script src="js/leafletlabel/leaflet.label.js"></script-->
+
+		<script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+
+		<script src="bower_components/jquery-modal/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="bower_components/jquery-modal/jquery.modal.css" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="css/mapa.css"/>		
+
+	</head>
+	<body>
+  
+  		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="row">
+				<div class="col-xs-3 col-md-1 col-lg-1 button-left">
+					<button type="button" id="btn-filters" class="btn btn-default">
+						<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="col-xs-6 col-md-10 col-lg-10 title">
+					Juzgados Federales
+				</div>
+				<div class="col-xs-3 col-md-1 col-lg-1 button-right">
+		 			<a href="ayuda.html" rel="modal:open" >
+						<i id="help" class="glyphicon glyphicon-question-sign"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Panel de la Izquierda -->
+		<nav id="panel-left" class="panel panel-left">
+			<div class="panel-content">
+				<div class="info options" >
+					<h4>Opciones</h4>
+					<div id='div_opciones'>
+						<div class='checkbox' >
+							<label class=''>
+								<input id='chk_juzgados' type='checkbox' checked='true' value='true' onclick='setDelegacion();'> 
+								Juzgados abogados MTEySS
+							</label>
+						</div>
+
+						<div class='checkbox' >
+							<label class=''>
+								<input id='chk_externos' type='checkbox' checked='true' value='true' onclick='setDelegacion();'> 
+								Juzgados abogados externos
+							</label>
+						</div>
+
+						<div class='checkbox' >
+							<label class=''>
+								<input id='chk_delegaciones' type='checkbox' checked='true' value='true' onclick='setDelegacion();'> 
+								Delegaciones Regionales
+							</label>
+						</div>
+
+
+					</div>
+				</div>
+				<br/>
+				<div class="info options">
+					<div class='vertical-align'>
+						<div>
+							<h4>Delegaciones</h4>
+						</div>
+						<!-- SOY MUY BURRO!!!!-->
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<div >
+
+							<button type="button" class="btn btn-xs" aria-label="Left Align" onclick="selectDelegacion(true);">
+							  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+							</button>
+						</div>
+						<div >
+							<button type="button" class="btn btn-xs" aria-label="Left Align" onclick="selectDelegacion(false);">
+							  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+
+						</div>
+					</div>
+					
+					<div id='div_delegaciones' class='select-area'>
+					</div>
+				</div>
+
+			</div>
+		</nav>
+
+		<div data-role="page" id="pageone" class="map-container">
+			<div data-role="main" class="ui-content">
+				<div id="map"></div>
+			</div>
+		</div>
+
+	</body>
+	<!-- funciones de datos -->
+	<script type="text/javascript" src="data/delegaciones.js"></script>
+	<script type="text/javascript" src="data/juzgados.js"></script>
+	
+	<!-- funciones de funcionalidad -->
+	<script type="text/javascript" src="js/misc.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			// click que muestra los filtros
+			$('#btn-filters').on('click',function(e){
+				e.preventDefault();
+				$('#panel-left').toggleClass('panel-left-expanded');
+			});
+
+			// Inicializo el Html (filtros)
+			initHtml();
+		});
+	</script>
+
+</html>

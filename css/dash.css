@@ -1,0 +1,30 @@
+.menu-items {
+  padding-left: 20px;  
+}
+
+.li-lugar {
+  display: none;
+}
+
+.combo-panel-left {
+  width:85% !important;
+  display: inline !important;
+  height: 30px;
+}
+
+.div-res-top {
+  width:85px;
+
+}
+
+.div-res-tit{
+  font-size:10px;
+}
+
+.div-res-dat{
+  font-size:20px;
+}
+
+.div-res-sub{
+  font-size:8px;
+}
