@@ -1,9 +1,9 @@
 
 function getDelegaciones() {
 
-	var icon = "dr_blue.png"
-	var icon_abog = "dr_blue.png"
-	var icon_no_abog = "dr_red.png"
+	var icon = "dr_green.png"
+	var icon_abog = "dr_green.png"
+	var icon_no_abog = "dr_orange.png"
 
 	var data = {
 	    "type": "FeatureCollection",
