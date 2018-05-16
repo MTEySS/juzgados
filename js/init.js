@@ -79,7 +79,7 @@ function setDelegacion() {
 
 	if ($('#chk_externos')[0].checked) {
 		juzgadosExtSelect = _.filter(juzgados.features, function(item){
-					  			return _.intersection(item.properties.abogados, ["Asistente PTN","Abogado ANSES"]).length > 0;
+					  			return _.intersection(item.properties.abogados, ["Asistente PTN","ANSES"]).length > 0;
 							});
 
 		puntos.features = puntos.features.concat(juzgadosExtSelect);		
