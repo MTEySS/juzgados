@@ -228,7 +228,7 @@ function getJuzgados() {
 					"localidad":"Azul",
 					"provincia":"Buenos Aires",
 					"dr_codigo":"",
-					"abogados":["DR Necochea"]
+					"abogados":["DR Tandil"]
 				}
 			},
 			{
@@ -608,7 +608,7 @@ function getJuzgados() {
 			{
 				"type": "Feature",
 	            "class": "juzgado",
-	            "icon": icon_no_deleg,
+	            "icon": icon_no_abog,
 				"geometry": {
 				   "type": "Point",
 				   "coordinates":  [ -71.314618,-41.133815 ]
@@ -618,7 +618,7 @@ function getJuzgados() {
 					"domicilio":"San Martín 425",
 					"localidad":"San Carlos de Bariloche",
 					"provincia":"Río Negro",
-					"dr_codigo":"",
+					"dr_codigo":"DR Bariloche",
 					"abogados":["DR Gral. Roca"]
 				}
 			},
@@ -744,7 +744,7 @@ function getJuzgados() {
 			{
 				"type": "Feature",
 	            "class": "juzgado",
-	            "icon": icon_no_deleg,
+	            "icon": icon_no_abog,
 				"geometry": {
 				   "type": "Point",
 				   "coordinates":  [ -69.216690,-51.622511 ]
