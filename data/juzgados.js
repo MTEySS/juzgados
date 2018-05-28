@@ -132,7 +132,7 @@ function getJuzgados() {
 			{
 				"type": "Feature",
 	            "class": "juzgado",
-	            "icon": icon_no_deleg,
+	            "icon": icon_deleg,
 				"geometry": {
 				   "type": "Point",
 				   "coordinates":  [ -58.951722,-34.162681 ]
